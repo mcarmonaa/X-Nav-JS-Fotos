@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Random Images</title>
+    <script type="text/javascript">
+        var urls = ["https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.e-xprimenet.com%2Fwp-content%2Fuploads%2F2012%2F10%2Furjc-logo-1.jpg&f=1",
+            "https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1786971711%2Fpeloto.png&f=1",
+            "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fs512731021.mialojamiento.es%2Fimg%2Furjc.jpg&f=1"
+        ];
+
+        function getImage() {
+            var image = document.getElementById("image");
+            var url = Math.floor(Math.random() * urls.length);
+            image.src = urls[url];
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Random Images Generator</h1>
+    <img id="image" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fs512731021.mialojamiento.es%2Fimg%2Furjc.jpg&f=1" alt="image"/>
+    <p><a href="javascript:getImage()">Another one!</a></p>
+</body>
+
+</html>
